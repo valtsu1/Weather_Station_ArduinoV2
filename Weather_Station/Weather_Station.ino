@@ -6,7 +6,7 @@
 #define DHTTYPE DHT11
 #define se Serial
 #define SAMPLES 10
-#define SENDMINUTES 1.0f
+#define SENDMINUTES 10.0f
 
 
 float currentTime = 0;
@@ -156,7 +156,7 @@ void addValue() {
 }
 
 void sendData() {
-  //Thingspeak push key
+  //Thingspeak write API key
   String key = "";
   // TCP connection
   String cmd = "AT+CIPSTART=\"TCP\",\"";
